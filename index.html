@@ -11,37 +11,38 @@
 
 
             @media only screen and (min-width: 768px) {
-            .body {
+          .desktop {
                 background-image: url('SGDesktop.png');
                 background-size: cover;
                 background-attachment: fixed;
                 background-repeat: no-repeat;
             }
+          .mobile {
+              display: none!important;
+            }
         }
          
         @media (max-width: 767px) {
-            .body {
-                background-image: url('SGMobile.png');
+          .mobile {
+                background-image: url('SGMobile.png')!important;
                 background-size: cover;
                 background-attachment: fixed;
                 background-repeat: no-repeat;
             }
+          .desktop {
+            display: none!important;
+          }
         }
       
     }
   </style>
 </head>
 <body>
-  <div class="image-placeholder">
-    <img src="SGWeb.png" alt="Stemgenics Info" style="width:100%;height:auto;">
-
-<!----
-      padding: 0;
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center; ---->
+  <div class="mobile">
+    <img src="SGMobile.png" alt="Stemgenics Info" style="width:100%;height:auto;">
+  </div>
+    <div class="desktop">
+    <img src="SGDesktop.png" alt="Stemgenics Info" style="width:100%;height:auto;">
   </div>
 </body>
 </html>
